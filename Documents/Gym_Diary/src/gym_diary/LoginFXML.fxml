@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="498.0" prefWidth="477.0" style="-fx-border-color: #39b5ff; -fx-border-width: 20;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gym_diary.LoginFXMLController">
+   <children>
+      <RadioButton fx:id="RadioPT" layoutX="247.0" layoutY="37.0" mnemonicParsing="false" onAction="#he" prefHeight="30.0" prefWidth="188.0" text="Register as new PT" textFill="#785656">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="Toggle" />
+         </toggleGroup>
+      </RadioButton>
+      <Label fx:id="lblOut" layoutX="76.0" layoutY="441.0" prefHeight="27.0" prefWidth="304.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnBack" layoutX="89.0" layoutY="373.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" stylesheets="@../styles/login.css" text="Back">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="147.0" layoutY="67.0" prefHeight="65.0" prefWidth="163.0" text="Login" textAlignment="JUSTIFY">
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+         <font>
+            <Font name="Cooper Black" size="48.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#050505" offset="0.35738831615120265" />
+                  <Stop color="#30159e" offset="0.4467353951890034" />
+                  <Stop color="#39bc3e" offset="0.6048109965635732" />
+                  <Stop color="#39b5ff" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <TextField fx:id="txtName" layoutX="89.0" layoutY="159.0" prefHeight="25.0" prefWidth="275.0" promptText="User Name" style="-fx-border-color: #39b5ff; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-radius: 22;">
+         <font>
+            <Font name="Cambria Bold" size="18.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="txtPass" layoutX="89.0" layoutY="213.0" prefHeight="25.0" prefWidth="275.0" promptText="Password" style="-fx-border-color: #39b5ff; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-radius: 22;">
+         <font>
+            <Font name="Cambria Bold" size="18.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="btnLogin" defaultButton="true" layoutX="89.0" layoutY="261.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" stylesheets="@../styles/login.css" text="Login">
+         <font>
+            <Font name="Cooper Black" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReset" layoutX="89.0" layoutY="322.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" stylesheets="@../styles/login.css" text="Reset">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <RadioButton fx:id="RadioClient" layoutX="39.0" layoutY="37.0" mnemonicParsing="false" onAction="#he" prefHeight="30.0" prefWidth="188.0" text="Register as new client" textFill="#785656" toggleGroup="$Toggle">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </RadioButton>
+   </children>
+</AnchorPane>

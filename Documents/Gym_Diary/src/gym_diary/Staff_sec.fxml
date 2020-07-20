@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1260.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="gym_diary.Staff_secController">
+   <children>
+      <Button fx:id="btnPt_Detail" layoutX="54.0" layoutY="349.0" mnemonicParsing="false" onAction="#he" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: #660000;" text="Per_Trainer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="62.0" layoutY="48.0" prefHeight="17.0" prefWidth="231.0" text="Product List" textFill="#660000">
+         <font>
+            <Font name="Bell MT Bold" size="39.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnDelete" layoutX="54.0" layoutY="536.0" mnemonicParsing="false" onAction="#he" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: #660000;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnAdd" layoutX="54.0" layoutY="403.0" mnemonicParsing="false" onAction="#he" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: #660000;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnBack" cancelButton="true" layoutX="54.0" layoutY="595.0" mnemonicParsing="false" onAction="#he" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: #660000;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnUpdate" layoutX="54.0" layoutY="463.0" mnemonicParsing="false" onAction="#he" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: #660000;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtSi" layoutX="54.0" layoutY="185.0" onKeyReleased="#kr" prefHeight="25.0" prefWidth="241.0" promptText="Search">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TableView fx:id="tblList" layoutX="319.0" layoutY="65.0" prefHeight="633.0" prefWidth="942.0" style="-fx-border-color: #660000; -fx-border-width: 10; -fx-background-color: Yellow;">
+         <columns>
+            <TableColumn prefWidth="75.0" text="C1" />
+            <TableColumn prefWidth="75.0" text="C2" />
+         </columns>
+      </TableView>
+      <ComboBox fx:id="cmbSc" layoutX="54.0" layoutY="128.0" onAction="#cc" prefHeight="25.0" prefWidth="241.0" promptText="Select Column" />
+   </children>
+</AnchorPane>

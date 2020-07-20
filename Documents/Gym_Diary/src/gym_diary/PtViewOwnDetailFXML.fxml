@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #4c4177;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="gym_diary.PtViewOwnDetailFXMLController">
+   <children>
+      <Button fx:id="btnUpdate" layoutX="681.0" layoutY="263.0" mnemonicParsing="false" onAction="#he" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: #C51162;" stylesheets="@../../../NetBeansProjects/Project/Online%20Shoping/src/styles/AdminPage.css" text="Update" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnBack" layoutX="676.0" layoutY="203.0" mnemonicParsing="false" onAction="#he" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: #C51162;" stylesheets="@../../../NetBeansProjects/Project/Online%20Shoping/src/styles/AdminPage.css" text="Back" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="160.0" layoutY="26.0" prefHeight="53.0" prefWidth="458.0" text="Personal Trainer Detail">
+         <cursor>
+            <Cursor fx:constant="CROSSHAIR" />
+         </cursor>
+         <effect>
+            <Reflection bottomOpacity="0.12" fraction="0.78" topOpacity="0.55" />
+         </effect>
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#bf1d1d" />
+                  <Stop color="GREY" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Pane layoutX="27.0" layoutY="125.0" prefHeight="476.0" prefWidth="621.0" style="-fx-background-color: white;">
+         <children>
+            <Label fx:id="lblOut" layoutX="14.0" layoutY="21.0" prefHeight="437.0" prefWidth="595.0" style="-fx-background-color: #C51162; -fx-border-color: white;" text="label" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
