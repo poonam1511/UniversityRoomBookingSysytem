@@ -58,8 +58,8 @@ public class RegisterClientFXMLController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-       // g1.addEmailValidator(txtEmail);
-       // g1.addPassValidator(txtClientPass);
+        g1.addEmailValidator(txtEmail);
+        g1.addPassValidator(txtClientPass);
         g1.addNameValidator(txtClientName);
         g1.addNameValidator(txtPT_Name);
         g1.addDateValidator(txtDate);
