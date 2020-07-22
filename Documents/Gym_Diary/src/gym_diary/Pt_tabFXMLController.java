@@ -11,6 +11,7 @@ import OS.bean.per_tra;
 import OS.dao.ClientDao;
 import OS.dao.per_traDao;
 import static gym_diary.Staff_secController.sc;
+import static gym_diary.Staff_secController.si;
 import java.net.URL;
 import java.util.LinkedList;
 import java.util.ResourceBundle;
@@ -70,10 +71,14 @@ static String sc = "id";
 
     @FXML
     private void cc(ActionEvent event) {
+        sc = cmbSc.getValue().toString();
+        populate();
     }
 
     @FXML
     private void kr(KeyEvent event) {
+        si = txtSi.getText().toString();
+        populate(); 
     }
 
     @FXML
@@ -100,7 +105,7 @@ static String sc = "id";
                     return;
                 }
                 else{
-                   ClientUpdateFXMLController.id = id;//trainer fxml make
+                   PtUpdateFXMLController.id = id;//trainer fxml make
                 Parent root = FXMLLoader.load(getClass().getResource("PtUpdateFXML.fxml"));
                 Scene scene = new Scene(root);
                 Stage stage = (Stage) btnBack.getScene().getWindow();

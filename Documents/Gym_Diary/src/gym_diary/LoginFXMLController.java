@@ -124,7 +124,7 @@ static String sc = "id";
                 stage.show();
                                     }
                  else if(mt!=null){
-                      
+                      PtViewOwnDetailFXMLController.id = mt.getId();
                 Parent root = FXMLLoader.load(getClass().getResource("PtViewOwnDetailFXML.fxml"));
                 Scene scene = new Scene(root);
                 Stage stage = (Stage) btnReset.getScene().getWindow();

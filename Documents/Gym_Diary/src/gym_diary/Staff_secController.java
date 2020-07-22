@@ -129,7 +129,7 @@ static String sc = "id";
         
         else if(event.getSource()==btnPt_Detail){
                        try {
-                 Parent root = FXMLLoader.load(getClass().getResource("Pt_TabFXML.fxml"));
+                 Parent root = FXMLLoader.load(getClass().getResource("Pt_tabFXML.fxml"));
                 Scene scene = new Scene(root);
                 Stage stage = (Stage) btnBack.getScene().getWindow();
                 stage.setScene(scene);
@@ -139,6 +139,24 @@ static String sc = "id";
                 e.printStackTrace();
             }                                    
         }
+        
+        else   if(event.getSource()==btnBack){
+             try {
+                Parent root = FXMLLoader.load(getClass().getResource("LoginFXML.fxml"));
+                Scene scene = new Scene(root);
+                Stage stage = (Stage) btnBack.getScene().getWindow();
+                stage.setScene(scene);
+                stage.show();
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        
+            
+        }
+    
+        
+        
         
     }
     

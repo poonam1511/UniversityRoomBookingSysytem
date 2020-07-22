@@ -6,9 +6,11 @@
 package gym_diary;
 
 import ECUtils.GUIValidator;
+import ECUtils.MyUtils;
 import OS.bean.per_tra;
 import OS.dao.per_traDao;
 import java.net.URL;
+import java.util.LinkedList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,6 +19,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -44,7 +47,7 @@ GUIValidator g1 = new GUIValidator();
     @FXML
     private TextField txtExpertise;
     @FXML
-    private TextField txtAvail;
+    private ComboBox<?> txtAvail;
 
     /**
      * Initializes the controller class.
@@ -54,6 +57,15 @@ GUIValidator g1 = new GUIValidator();
         // TODO
         g1.addPassValidator(txtPtPass);
         g1.addNameValidator(txtPtName);
+        LinkedList roles = new LinkedList();
+        roles.add("7am - 9am");
+        roles.add("10am-12pm");
+        roles.add("3pm-5pm");
+        roles.add("5pm-7pm");
+        roles.add("7pm-9pm");
+        
+        txtAvail.getItems().addAll(roles);
+        MyUtils.selectComboBoxValue(txtAvail, "7am - 9am");
     }    
 
     @FXML
@@ -69,7 +81,7 @@ GUIValidator g1 = new GUIValidator();
                  c1.setPt_name(txtPtName.getText());
                  c1.setExpertise(txtExpertise.getText());
                  c1.setPass(txtPtPass.getText());
-                 c1.setAvail_time(txtAvail.getText());
+                 c1.setAvail_time(txtAvail.getValue().toString());
                  c1.setEmail(txtEmail.getText());
                  per_traDao.insert(c1);
                 Parent root = FXMLLoader.load(getClass().getResource("LoginFXML.fxml"));

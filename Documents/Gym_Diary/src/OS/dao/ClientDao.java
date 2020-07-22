@@ -63,7 +63,7 @@ public class ClientDao extends BaseDAO {
            // Date obj =new Date();
             con = getCon();
             //client_name varchar(45), pass varchar(45), pt_name varchar(45),email varchar(20), date varchar(20), time varchar(20), duration varchar(30), focus varchar(40),  PRIMARY KEY (id))",
-            String sql = "insert into client (client_name , pt_name , pass , email, focus , time ,duration,date ) values (?, ?, ?,?, ?,?,?,?)";
+            String sql = "insert into client (client_name , pt_name , pass , email, focus , time ,duration, date) values (?, ?, ?,?, ?,?,?,?)";
             int i = 1;
             PreparedStatement st = con.prepareStatement(sql);
             st.setString(i++, c1.getClient_name());
@@ -201,6 +201,39 @@ public class ClientDao extends BaseDAO {
     }
      
      
+     
+     public static client searchByFocus(String Pt_name, String time){
+        Connection con=null;
+       client res=null;
+        try {
+            con= BaseDAO.getCon();
+            String sql = "select * from client where pt_name=? and time=?";
+            PreparedStatement st= con.prepareStatement(sql);
+            st.setString(1,Pt_name );
+            st.setString(2, time);
+            ResultSet rs=st.executeQuery();
+            while(rs.next()){
+                client c1= new client();
+                c1.setId(rs.getString("id"));
+                c1.setClient_name(rs.getString("client_name"));
+                c1.setPt_name(rs.getString("pt_name"));
+                c1.setFocus(rs.getString("focus"));
+                c1.setEmail(rs.getString("email"));
+                c1.setPass(rs.getString("pass"));
+                c1.setTime(rs.getString("time"));
+                c1.setDate(rs.getString("date"));
+                c1.setDuration(rs.getString("duration"));
+                res = c1;
+            }
+            rs.close();
+            st.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally{
+            BaseDAO.closeCon(con);
+        }
+        return res;
+    }
      
     
 }

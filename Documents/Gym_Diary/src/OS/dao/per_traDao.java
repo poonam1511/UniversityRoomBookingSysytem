@@ -189,6 +189,32 @@ public class per_traDao extends BaseDAO {
      
      
      
-    
+     
+     public static  LinkedList<String>  searchByFocus(String focus, String time) {
+        LinkedList<String> res = new LinkedList<String>();
+        Connection con = null;
+        
+        try {
+            con = getCon();
+            String sql = "select distinct(pt_name) from per_tra where expertise=? and Avail_time=?";
+            PreparedStatement st = con.prepareStatement(sql);
+            //int i=1;
+            st.setString(1, focus);
+            st.setString(2, time);
+            
+           // st.setString(i++, "%" + focus + "%");
+            ResultSet rs = st.executeQuery();
+            while (rs.next()) {
+                res.add(rs.getString("pt_name"));
+                
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            closeCon(con);
+        }
+        return res;
+    }
+     
     
 }
