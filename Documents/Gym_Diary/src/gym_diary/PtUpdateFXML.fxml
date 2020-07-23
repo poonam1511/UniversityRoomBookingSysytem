@@ -7,81 +7,72 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="gym_diary.PtUpdateFXMLController">
+<AnchorPane id="AnchorPane" prefHeight="679.0" prefWidth="1058.0" style="-fx-background-color: #ff5252;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gym_diary.PtUpdateFXMLController">
    <children>
       <Label layoutX="359.0" layoutY="57.0" prefHeight="45.0" prefWidth="275.0" text="Pt_Reg  Form">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <Pane layoutX="103.0" layoutY="126.0" prefHeight="599.0" prefWidth="885.0" style="-fx-background-color: white;">
+      <Pane layoutX="87.0" layoutY="126.0" prefHeight="491.0" prefWidth="901.0" style="-fx-background-color: white;">
          <children>
-            <TextField fx:id="txtPtName" layoutX="339.0" layoutY="33.0" prefHeight="45.0" prefWidth="300.0" promptText="Pt_name" style="-fx-border-color: #ff5252; -fx-border-width: 2; -fx-background-radius: 22; -fx-border-radius: 20;">
+            <TextField fx:id="txtPtName" layoutX="340.0" layoutY="33.0" prefHeight="45.0" prefWidth="300.0" promptText="Pt_name" style="-fx-border-color: #ff5252; -fx-border-width: 2; -fx-background-radius: 22; -fx-border-radius: 20;">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </TextField>
-            <PasswordField fx:id="txtPtPass" layoutX="339.0" layoutY="154.0" prefHeight="45.0" prefWidth="300.0" promptText="Password" style="-fx-border-color: #ff5252; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-radius: 22;">
+            <PasswordField fx:id="txtPtPass" layoutX="340.0" layoutY="154.0" prefHeight="45.0" prefWidth="300.0" promptText="Password" style="-fx-border-color: #ff5252; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-radius: 22;">
                <font>
                   <Font size="16.0" />
                </font>
             </PasswordField>
-            <TextField fx:id="txtEmail" layoutX="339.0" layoutY="208.0" prefHeight="45.0" prefWidth="300.0" promptText="Email" style="-fx-border-color: #ff5252; -fx-border-width: 2; -fx-background-radius: 22; -fx-border-radius: 20;">
+            <TextField fx:id="txtEmail" layoutX="340.0" layoutY="208.0" prefHeight="45.0" prefWidth="300.0" promptText="Email" style="-fx-border-color: #ff5252; -fx-border-width: 2; -fx-background-radius: 22; -fx-border-radius: 20;">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </TextField>
-            <Label layoutX="169.0" layoutY="37.0" text="Pt_name" textFill="#ff5252">
+            <Label layoutX="150.0" layoutY="37.0" text="Pt_name" textFill="#ff5252">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="173.0" layoutY="217.0" text="Email" textFill="#ff5252">
+            <Label layoutX="150.0" layoutY="217.0" text="Email" textFill="#ff5252">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="173.0" layoutY="159.0" prefHeight="35.0" prefWidth="52.0" text="Pass" textFill="#ff5252">
+            <Label layoutX="150.0" layoutY="159.0" prefHeight="35.0" prefWidth="52.0" text="Pass" textFill="#ff5252">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <TextField fx:id="txtExpertise" layoutX="339.0" layoutY="89.0" prefHeight="45.0" prefWidth="300.0" promptText="Expert_field" style="-fx-border-color: #ff5252; -fx-border-width: 2; -fx-background-radius: 22; -fx-border-radius: 20;">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-            </TextField>
-            <Label layoutX="168.0" layoutY="93.0" text="Expertise" textFill="#ff5252">
+            <Label layoutX="150.0" layoutY="93.0" text="Expertise" textFill="#ff5252">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="175.0" layoutY="276.0" text="Avail_Time" textFill="#ff5252">
+            <Label layoutX="150.0" layoutY="276.0" text="Avail_Time" textFill="#ff5252">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <TextField fx:id="txtAvail" layoutX="337.0" layoutY="270.0" prefHeight="45.0" prefWidth="300.0" promptText="Availiability" style="-fx-border-color: #ff5252; -fx-border-width: 2; -fx-background-radius: 22; -fx-border-radius: 20;">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-            </TextField>
-            <Button fx:id="btnReset" layoutX="341.0" layoutY="505.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #ff5252;" stylesheets="@../styles/login.css" text="Reset">
+            <Button fx:id="btnReset" layoutX="336.0" layoutY="440.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #ff5252;" stylesheets="@../styles/login.css" text="Reset">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button fx:id="btnSubmit" defaultButton="true" layoutX="341.0" layoutY="444.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #ff5252;" stylesheets="@../styles/login.css" text="Submit">
+            <Button fx:id="btnUpdate" defaultButton="true" layoutX="38.0" layoutY="440.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #ff5252;" stylesheets="@../styles/login.css" text="Update">
                <font>
                   <Font name="Cooper Black" size="16.0" />
                </font>
             </Button>
-            <Button fx:id="btnBack" layoutX="341.0" layoutY="556.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #ff5252;" stylesheets="@../styles/login.css" text="Back">
+            <Button fx:id="btnBack" layoutX="620.0" layoutY="440.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #ff5252;" stylesheets="@../styles/login.css" text="Back">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
+            <ComboBox fx:id="txtAvail" layoutX="340.0" layoutY="264.0" minHeight="45.0" prefHeight="25.0" prefWidth="300.0" promptText="Avail_Time" style="-fx-border-color: #ff5252;" />
+            <ComboBox fx:id="txtExpertise" layoutX="340.0" layoutY="98.0" minHeight="45.0" prefHeight="25.0" prefWidth="300.0" promptText="Expertise" style="-fx-border-color: #ff5252;" />
          </children>
       </Pane>
    </children>

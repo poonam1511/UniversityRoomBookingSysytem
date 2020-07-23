@@ -86,7 +86,7 @@ static String sc = "id";
         
         if(event.getSource()==btnAdd){
                        try {
-                 Parent root = FXMLLoader.load(getClass().getResource("RegisterPtFXML.fxml"));
+                 Parent root = FXMLLoader.load(getClass().getResource("RegisterPTFXML.fxml"));
                 Scene scene = new Scene(root);
                 Stage stage = (Stage) btnBack.getScene().getWindow();
                 stage.setScene(scene);

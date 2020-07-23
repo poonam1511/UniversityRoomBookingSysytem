@@ -45,7 +45,7 @@ GUIValidator g1 = new GUIValidator();
     @FXML
     private PasswordField txtPtPass;
     @FXML
-    private TextField txtExpertise;
+    private ComboBox<?> txtExpertise;
     @FXML
     private ComboBox<?> txtAvail;
 
@@ -64,8 +64,17 @@ GUIValidator g1 = new GUIValidator();
         roles.add("5pm-7pm");
         roles.add("7pm-9pm");
         
+        
+        LinkedList focus = new LinkedList();
+        focus.add("weight loss");
+        focus.add("muscle gain");
+        focus.add("flexibility");
+        focus.add("cardio");
+        focus.add("upper body");
+        focus.add("lower body");
         txtAvail.getItems().addAll(roles);
-        MyUtils.selectComboBoxValue(txtAvail, "7am - 9am");
+       // MyUtils.selectComboBoxValue(txtAvail, "7am - 9am");
+        txtExpertise.getItems().addAll(focus);
     }    
 
     @FXML
@@ -79,7 +88,7 @@ GUIValidator g1 = new GUIValidator();
                  per_tra c1=new per_tra();
                  
                  c1.setPt_name(txtPtName.getText());
-                 c1.setExpertise(txtExpertise.getText());
+                 c1.setExpertise(txtExpertise.getValue().toString());
                  c1.setPass(txtPtPass.getText());
                  c1.setAvail_time(txtAvail.getValue().toString());
                  c1.setEmail(txtEmail.getText());

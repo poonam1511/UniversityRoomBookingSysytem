@@ -41,7 +41,7 @@ public class ClientDao extends BaseDAO {
                 c1.setPass(rs.getString("pass"));
                 c1.setTime(rs.getString("time"));
                 c1.setDuration(rs.getString("duration"));
-                
+                c1.setDate(rs.getString("date"));
                 res.add(c1);
             }
         } catch (Exception e) {
@@ -63,17 +63,18 @@ public class ClientDao extends BaseDAO {
            // Date obj =new Date();
             con = getCon();
             //client_name varchar(45), pass varchar(45), pt_name varchar(45),email varchar(20), date varchar(20), time varchar(20), duration varchar(30), focus varchar(40),  PRIMARY KEY (id))",
-            String sql = "insert into client (client_name , pt_name , pass , email, focus , time ,duration, date) values (?, ?, ?,?, ?,?,?,?)";
+            String sql = "insert into client (client_name , pt_name , pass , email ,date, time ,duration, focus) values (?, ?, ?,?, ?,?,?,?)";
             int i = 1;
             PreparedStatement st = con.prepareStatement(sql);
             st.setString(i++, c1.getClient_name());
             st.setString(i++, c1.getPt_name());
             st.setString(i++, c1.getPass());
             st.setString(i++, c1.getEmail());
-            st.setString(i++, c1.getFocus());
+            st.setString(i++, c1.getDate());  
             st.setString(i++, c1.getTime());
             st.setString(i++, c1.getDuration());
-            st.setString(i++, c1.getDate());
+            st.setString(i++, c1.getFocus());
+            
             
             st.executeUpdate();
         } catch (Exception e) {
@@ -108,7 +109,7 @@ public class ClientDao extends BaseDAO {
      public static void update(client c1) {
         Connection con = null;
         try {
-            Date obj =new Date();
+           // Date obj =new Date();
             con = getCon();
             String sql = "update client set client_name  = ?, pt_name =? , pass=? , email=?, focus=? , time=? ,duration=?,date=? where id =?";
             int i = 1;

@@ -9,11 +9,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="637.0" prefWidth="1000.0" style="-fx-background-color: #4c4177;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gym_diary.ClientViewOwnDetailFXMLController">
+<AnchorPane id="AnchorPane" prefHeight="637.0" prefWidth="1000.0" style="-fx-background-color: #2ECC71;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gym_diary.ClientViewOwnDetailFXMLController">
    <children>
       <Pane layoutX="17.0" layoutY="115.0" prefHeight="476.0" prefWidth="621.0" style="-fx-background-color: white;">
          <children>
-            <Label fx:id="lblOut" layoutX="14.0" layoutY="21.0" prefHeight="437.0" prefWidth="595.0" style="-fx-background-color: #C51162; -fx-border-color: white;" text="label" textFill="WHITE">
+            <Label fx:id="lblOut" layoutX="14.0" layoutY="21.0" prefHeight="437.0" prefWidth="595.0" style="-fx-background-color: #7D6608; -fx-border-color: white;" text="label" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
@@ -34,17 +34,17 @@
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
                   <Stop color="#bf1d1d" />
-                  <Stop color="GREY" offset="1.0" />
+                  <Stop color="WHITE" offset="1.0" />
                </stops>
             </LinearGradient>
          </textFill>
       </Label>
-      <Button fx:id="btnBack" layoutX="666.0" layoutY="193.0" mnemonicParsing="false" onAction="#he" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: #C51162;" stylesheets="@../../../NetBeansProjects/Project/Online%20Shoping/src/styles/AdminPage.css" text="Back" textFill="WHITE">
+      <Button fx:id="btnBack" layoutX="671.0" layoutY="193.0" mnemonicParsing="false" onAction="#he" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: #7D6608;" stylesheets="@../../../NetBeansProjects/Project/Online%20Shoping/src/styles/AdminPage.css" text="Back" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btnUpdate" layoutX="671.0" layoutY="253.0" mnemonicParsing="false" onAction="#he" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: #C51162;" stylesheets="@../../../NetBeansProjects/Project/Online%20Shoping/src/styles/AdminPage.css" text="Update" textFill="WHITE">
+      <Button fx:id="btnUpdate" layoutX="671.0" layoutY="253.0" mnemonicParsing="false" onAction="#he" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: #7D6608;" stylesheets="@../../../NetBeansProjects/Project/Online%20Shoping/src/styles/AdminPage.css" text="Update" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>

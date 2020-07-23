@@ -46,7 +46,7 @@ public class RegisterClientFXMLController implements Initializable {
     @FXML
     private ComboBox<?> txtPT_Name;
     @FXML
-    private TextField txtFocus;
+    private ComboBox<?> txtFocus;
     @FXML
     private ComboBox<?> txtTime;
     @FXML
@@ -58,8 +58,6 @@ public class RegisterClientFXMLController implements Initializable {
     @FXML
     private ComboBox<?> txtDuration;
 
-    @FXML
-    private TextField txtDate;
     @FXML
     private DatePicker txtDatePicker;
     /**
@@ -85,11 +83,19 @@ public class RegisterClientFXMLController implements Initializable {
         duration.add("9 month");
         duration.add("1 year");
         
+        LinkedList focus = new LinkedList();
+        focus.add("weight loss");
+        focus.add("muscle gain");
+        focus.add("flexibility");
+        focus.add("cardio");
+        focus.add("upper body");
+        focus.add("lower body");
+        txtFocus.getItems().addAll(focus);
         txtTime.getItems().addAll(roles);
         txtDuration.getItems().addAll(duration);
         
-        MyUtils.selectComboBoxValue(txtTime, "7am - 9am");
-        MyUtils.selectComboBoxValue(txtDuration, "3 month");
+       // MyUtils.selectComboBoxValue(txtTime, "7am - 9am");
+       // MyUtils.selectComboBoxValue(txtDuration, "3 month");
         
         g1.addEmailValidator(txtEmail);
         g1.addPassValidator(txtClientPass);
@@ -111,12 +117,12 @@ public class RegisterClientFXMLController implements Initializable {
                  c1.setClient_name(txtClientName.getText());
                  c1.setPt_name(txtPT_Name.getValue().toString());
                  c1.setEmail(txtEmail.getText());
-                 c1.setFocus(txtFocus.getText());
+                 c1.setFocus(txtFocus.getValue().toString());
                  c1.setPass(txtClientPass.getText());
                  c1.setTime(txtTime.getValue().toString());
                  c1.setDuration(txtDuration.getValue().toString());
-                 c1.setDate(txtDate.getText());
-                 //c1.setDate(txtDatePicker.getValue().toString());
+                 //c1.setDate(txtDate.getText());
+                 c1.setDate(txtDatePicker.getValue().toString());
                  ClientDao.insert(c1);
                 Parent root = FXMLLoader.load(getClass().getResource("LoginFXML.fxml"));
                 Scene scene = new Scene(root);
@@ -164,7 +170,7 @@ public class RegisterClientFXMLController implements Initializable {
 
     @FXML
     private void kr(ActionEvent event) {
-        LinkedList res=per_traDao.searchByFocus(txtFocus.getText(),txtTime.getValue().toString());
+        LinkedList res=per_traDao.searchByFocus(txtFocus.getValue().toString(),txtTime.getValue().toString());
        /*  if(c2!=null){
                      txtPT_Name.setDisable(false);
                      //txtPT_Name.setTex(c2.getPt_name());

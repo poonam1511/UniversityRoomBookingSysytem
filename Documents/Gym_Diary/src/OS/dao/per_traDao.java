@@ -101,7 +101,7 @@ public class per_traDao extends BaseDAO {
      public static void update(per_tra c1) {
         Connection con = null;
         try {
-            Date obj =new Date();
+            //Date obj =new Date();
             con = getCon();
             String sql = "update per_tra set  pt_name =? , pass=? ,email=?, expertise=?, Avail_time=? where id =?";
             int i = 1;
@@ -111,6 +111,7 @@ public class per_traDao extends BaseDAO {
             st.setString(i++, c1.getEmail());
             st.setString(i++, c1.getExpertise());
             st.setString(i++, c1.getAvail_time());
+            st.setString(i++, c1.getId());
             
             st.executeUpdate();
         } catch (Exception e) {
@@ -216,5 +217,32 @@ public class per_traDao extends BaseDAO {
         return res;
     }
      
+     
+    /*  public static  LinkedList<String>  searchUpByFocus(String focus, String time) {
+        LinkedList<String> res = new LinkedList<String>();
+        Connection con = null;
+        
+        try {
+            con = getCon();
+            String sql = "select distinct(pt_name) from per_tra where expertise=? and Avail_time=?";
+            PreparedStatement st = con.prepareStatement(sql);
+            //int i=1;
+            st.setString(1, focus);
+            st.setString(2, time);
+            
+           // st.setString(i++, "%" + focus + "%");
+            ResultSet rs = st.executeQuery();
+            while (rs.next()) {
+                res.add(rs.getString("pt_name"));
+                
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            closeCon(con);
+        }
+        return res;
+    }
+     */
     
 }

@@ -6,15 +6,21 @@
 package gym_diary;
 
 import ECUtils.GUIValidator;
+import ECUtils.MyUtils;
 import OS.bean.client;
 import OS.dao.ClientDao;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -55,6 +61,45 @@ public static String id;
 
     @FXML
     private void he(ActionEvent event) {
+        if (event.getSource() == btnUpdate) {
+            try {
+                String id = c1.getId();
+                if (id == null) {
+                    JOptionPane.showMessageDialog(null, "Please select a row!");
+                    return;
+                }
+                else{
+                   ClientUpdateFXMLController.id = id;
+                Parent root = FXMLLoader.load(getClass().getResource("ClientUpdateFXML.fxml"));
+                Scene scene = new Scene(root);
+                Stage stage = (Stage) btnBack.getScene().getWindow();
+                stage.setScene(scene);
+                stage.setMaximized(true);
+                stage.show();
+                }
+                
+               } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } 
+        
+        
+        
+        else if (event.getSource() == btnBack) {
+            try {
+                Parent root = FXMLLoader.load(getClass().getResource("LoginFXML.fxml"));
+                Scene scene = new Scene(root);
+                Stage stage = (Stage) btnBack.getScene().getWindow();
+                stage.setScene(scene);
+                stage.show();
+                
+                
+            } catch (Exception e) {
+                e.printStackTrace();
+            }  
+    
+}
     }
+    
     
 }
