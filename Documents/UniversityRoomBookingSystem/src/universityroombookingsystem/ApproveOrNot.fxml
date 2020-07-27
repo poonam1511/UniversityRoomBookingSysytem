@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -7,22 +9,21 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #660000;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="universityroombookingsystem.ApproveOrNotController">
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #660000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universityroombookingsystem.ApproveOrNotController">
    <children>
-      <Pane layoutX="61.0" layoutY="47.0" prefHeight="509.0" prefWidth="885.0" style="-fx-background-color: white;">
+      <Pane layoutX="58.0" layoutY="82.0" prefHeight="509.0" prefWidth="885.0" style="-fx-background-color: white;">
          <children>
-            <Button fx:id="btnReset" layoutX="334.0" layoutY="348.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../../../Gym_Diary/src/styles/login.css" text="Reset" textFill="WHITE">
+            <Button fx:id="btnReset" layoutX="334.0" layoutY="348.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../styles/login.css" text="Reset" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button fx:id="btnApprove" defaultButton="true" layoutX="334.0" layoutY="298.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../../../Gym_Diary/src/styles/login.css" text="Approve" textFill="WHITE">
+            <Button fx:id="btnApprove" defaultButton="true" layoutX="334.0" layoutY="298.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../styles/login.css" text="Approve" textFill="WHITE">
                <font>
                   <Font name="Cooper Black" size="16.0" />
                </font>
             </Button>
-            <Button fx:id="btnBack" layoutX="334.0" layoutY="398.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../../../Gym_Diary/src/styles/login.css" text="Back" textFill="WHITE">
+            <Button fx:id="btnBack" layoutX="334.0" layoutY="398.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../styles/login.css" text="Back" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
@@ -45,5 +46,24 @@
             </TextField>
          </children>
       </Pane>
+      <Label layoutX="311.0" layoutY="14.0" prefHeight="65.0" prefWidth="354.0" text="Approving" textAlignment="JUSTIFY">
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+         <font>
+            <Font name="Cooper Black" size="48.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#050505" offset="0.35738831615120265" />
+                  <Stop color="#30159e" offset="0.4467353951890034" />
+                  <Stop color="#3db84c" offset="0.604810996563573" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
    </children>
 </AnchorPane>

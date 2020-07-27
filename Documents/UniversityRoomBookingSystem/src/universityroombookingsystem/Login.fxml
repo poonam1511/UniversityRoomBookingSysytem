@@ -9,15 +9,14 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="500.0" style="-fx-border-color: #660000; -fx-border-width: 20;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="universityroombookingsystem.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="500.0" style="-fx-border-color: #660000; -fx-border-width: 20;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universityroombookingsystem.LoginController">
    <children>
-      <Button fx:id="btnReset" layoutX="110.0" layoutY="345.0" mnemonicParsing="false" onAction="#he" prefHeight="40.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../../../Gym_Diary/src/styles/login.css" text="Reset" textFill="WHITE">
+      <Button fx:id="btnReset" layoutX="110.0" layoutY="345.0" mnemonicParsing="false" onAction="#he" prefHeight="40.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../styles/login.css" text="Reset" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btnLogin" defaultButton="true" layoutX="110.0" layoutY="295.0" mnemonicParsing="false" onAction="#he" prefHeight="40.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../../../Gym_Diary/src/styles/login.css" text="Login" textFill="WHITE">
+      <Button fx:id="btnLogin" defaultButton="true" layoutX="110.0" layoutY="295.0" mnemonicParsing="false" onAction="#he" prefHeight="40.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../styles/login.css" text="Login" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -51,7 +50,7 @@
             </RadialGradient>
          </textFill>
       </Label>
-      <Button fx:id="btnBack" layoutX="110.0" layoutY="395.0" mnemonicParsing="false" onAction="#he" prefHeight="40.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../../../Gym_Diary/src/styles/login.css" text="Back" textFill="WHITE">
+      <Button fx:id="btnBack" layoutX="110.0" layoutY="395.0" mnemonicParsing="false" onAction="#he" prefHeight="40.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../styles/login.css" text="Back" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

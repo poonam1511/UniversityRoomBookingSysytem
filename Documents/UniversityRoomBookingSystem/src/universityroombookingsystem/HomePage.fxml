@@ -21,17 +21,17 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Button fx:id="btnReset" layoutX="352.0" layoutY="414.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../../../Gym_Diary/src/styles/login.css" text="Reset" textFill="WHITE">
+            <Button fx:id="btnReset" layoutX="352.0" layoutY="414.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../styles/login.css" text="Reset" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button fx:id="btnBook" defaultButton="true" layoutX="352.0" layoutY="364.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../../../Gym_Diary/src/styles/login.css" text="Book Now" textFill="WHITE">
+            <Button fx:id="btnBook" defaultButton="true" layoutX="352.0" layoutY="364.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../styles/login.css" text="Book Now" textFill="WHITE">
                <font>
                   <Font name="Cooper Black" size="16.0" />
                </font>
             </Button>
-            <Button fx:id="btnBack" layoutX="352.0" layoutY="464.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../../../Gym_Diary/src/styles/login.css" text="Back" textFill="WHITE">
+            <Button fx:id="btnBack" layoutX="352.0" layoutY="464.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../styles/login.css" text="Back" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>

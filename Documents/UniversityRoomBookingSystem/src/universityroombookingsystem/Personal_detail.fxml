@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -7,7 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="838.0" prefWidth="1000.0" style="-fx-background-color: #660000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universityroombookingsystem.Personal_detailController">
+<AnchorPane id="AnchorPane" prefHeight="838.0" prefWidth="1036.0" style="-fx-background-color: #660000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universityroombookingsystem.Personal_detailController">
    <children>
       <Pane layoutX="85.0" layoutY="118.0" prefHeight="650.0" prefWidth="885.0" style="-fx-background-color: white;">
          <children>
@@ -36,17 +38,17 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Button fx:id="btnReset" layoutX="335.0" layoutY="445.0" mnemonicParsing="false" onAction="#he" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: #660000;" stylesheets="@../../../Gym_Diary/src/styles/login.css" text="Reset" textFill="WHITE">
+            <Button fx:id="btnReset" layoutX="335.0" layoutY="445.0" mnemonicParsing="false" onAction="#he" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: #660000;" stylesheets="@../styles/login.css" text="Reset" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="btnSubmit" defaultButton="true" layoutX="46.0" layoutY="445.0" mnemonicParsing="false" onAction="#he" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: #660000;" stylesheets="@../../../Gym_Diary/src/styles/login.css" text="Submit" textFill="WHITE">
+            <Button fx:id="btnSubmit" defaultButton="true" layoutX="46.0" layoutY="445.0" mnemonicParsing="false" onAction="#he" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: #660000;" stylesheets="@../styles/login.css" text="Submit" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="btnBack" layoutX="621.0" layoutY="445.0" mnemonicParsing="false" onAction="#he" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: #660000;" stylesheets="@../../../Gym_Diary/src/styles/login.css" text="Back" textFill="WHITE">
+            <Button fx:id="btnBack" layoutX="621.0" layoutY="445.0" mnemonicParsing="false" onAction="#he" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: #660000;" stylesheets="@../styles/login.css" text="Back" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -64,5 +66,24 @@
             </TextField>
          </children>
       </Pane>
+      <Label layoutX="318.0" layoutY="28.0" prefHeight="65.0" prefWidth="448.0" text="Personal_Detail" textAlignment="JUSTIFY">
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+         <font>
+            <Font name="Cooper Black" size="48.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#050505" offset="0.35738831615120265" />
+                  <Stop color="#30159e" offset="0.4467353951890034" />
+                  <Stop color="#3db84c" offset="0.604810996563573" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
    </children>
 </AnchorPane>

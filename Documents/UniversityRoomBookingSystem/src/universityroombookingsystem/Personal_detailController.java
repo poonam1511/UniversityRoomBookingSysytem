@@ -23,6 +23,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -59,6 +60,9 @@ static String capacity="";
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         g1.addIntValidator(txtAttendee);
+        g1.addEmailValidator(txtEmail);
+        g1.addNameValidator(txtLecturerName);
+        
     }    
 
     @FXML
@@ -81,10 +85,17 @@ static String capacity="";
                  c1.setDuration(duration);
                  c1.setRoom_cap(capacity);
                  c1.setStatus("pending");
-             
-                 
+             if(Integer.parseInt(txtAttendee.getText())<=Integer.parseInt(capacity)){
                  BookDao.insert(c1);
-                 Parent root = FXMLLoader.load(getClass().getResource("Booking_tab.fxml"));
+                 JOptionPane.showMessageDialog(null, "Your status will be updated soon!");
+             }
+              
+             else{
+                 JOptionPane.showMessageDialog(null, "Room Capacity can't be smaller than Expected Attendee!!!!");
+             }
+                 
+                 
+                 Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
                 Scene scene = new Scene(root);
                 Stage stage = (Stage) btnReset.getScene().getWindow();
                 stage.setScene(scene);

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -7,14 +9,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #660000;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="universityroombookingsystem.UpdateRoomController">
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #660000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universityroombookingsystem.UpdateRoomController">
    <children>
-      <Label layoutX="350.0" layoutY="37.0" prefHeight="66.0" prefWidth="333.0" text="Room_Detail" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="45.0" />
-         </font>
-      </Label>
       <Pane layoutX="99.0" layoutY="135.0" prefHeight="545.0" prefWidth="885.0" style="-fx-background-color: white;">
          <children>
             <TextField fx:id="txtRoomNo" layoutX="391.0" layoutY="67.0" prefHeight="45.0" prefWidth="300.0" promptText="Room_no" style="-fx-border-color: #660000; -fx-border-width: 2; -fx-background-radius: 22; -fx-border-radius: 20;">
@@ -37,17 +33,17 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Button fx:id="btnReset" layoutX="352.0" layoutY="386.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../../../Gym_Diary/src/styles/login.css" text="Reset" textFill="WHITE">
+            <Button fx:id="btnReset" layoutX="352.0" layoutY="386.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../styles/login.css" text="Reset" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button fx:id="btnUpdate" defaultButton="true" layoutX="352.0" layoutY="336.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../../../Gym_Diary/src/styles/login.css" text="Update" textFill="WHITE">
+            <Button fx:id="btnUpdate" defaultButton="true" layoutX="352.0" layoutY="336.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../styles/login.css" text="Update" textFill="WHITE">
                <font>
                   <Font name="Cooper Black" size="16.0" />
                </font>
             </Button>
-            <Button fx:id="btnBack" layoutX="352.0" layoutY="436.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../../../Gym_Diary/src/styles/login.css" text="Back" textFill="WHITE">
+            <Button fx:id="btnBack" layoutX="352.0" layoutY="436.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../styles/login.css" text="Back" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
@@ -56,5 +52,24 @@
             <ComboBox fx:id="cmbType" layoutX="391.0" layoutY="156.0" minHeight="45.0" prefHeight="25.0" prefWidth="300.0" promptText="Type of Room" style="-fx-border-color: #660000;" />
          </children>
       </Pane>
+      <Label layoutX="303.0" layoutY="35.0" prefHeight="65.0" prefWidth="354.0" text="Room_Detail" textAlignment="JUSTIFY">
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+         <font>
+            <Font name="Cooper Black" size="48.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#050505" offset="0.35738831615120265" />
+                  <Stop color="#30159e" offset="0.4467353951890034" />
+                  <Stop color="#3db84c" offset="0.604810996563573" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
    </children>
 </AnchorPane>

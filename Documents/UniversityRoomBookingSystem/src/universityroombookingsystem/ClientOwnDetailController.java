@@ -12,9 +12,13 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -50,6 +54,21 @@ public static String id;
 
     @FXML
     private void he(ActionEvent event) {
+        
+        if(event.getSource()==btnBack){
+             try {
+                Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
+                Scene scene = new Scene(root);
+                Stage stage = (Stage) btnBack.getScene().getWindow();
+                stage.setScene(scene);
+                stage.show();
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        
+            
+        }
     }
     
 }
