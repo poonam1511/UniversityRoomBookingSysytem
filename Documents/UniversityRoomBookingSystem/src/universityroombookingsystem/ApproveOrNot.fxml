@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #660000;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="universityroombookingsystem.ApproveOrNotController">
+   <children>
+      <Pane layoutX="61.0" layoutY="47.0" prefHeight="509.0" prefWidth="885.0" style="-fx-background-color: white;">
+         <children>
+            <Button fx:id="btnReset" layoutX="334.0" layoutY="348.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../../../Gym_Diary/src/styles/login.css" text="Reset" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnApprove" defaultButton="true" layoutX="334.0" layoutY="298.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../../../Gym_Diary/src/styles/login.css" text="Approve" textFill="WHITE">
+               <font>
+                  <Font name="Cooper Black" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnBack" layoutX="334.0" layoutY="398.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../../../Gym_Diary/src/styles/login.css" text="Back" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="cmbRoomNo" layoutX="328.0" layoutY="187.0" minHeight="45.0" prefHeight="25.0" prefWidth="300.0" promptText="Room Number" style="-fx-border-color: #660000;" />
+            <Label layoutX="170.0" layoutY="80.0" text="Booking_id" textFill="#660000">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="196.0" layoutY="192.0" text="Room_no" textFill="#660000">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtBookingId" layoutX="328.0" layoutY="70.0" prefHeight="45.0" prefWidth="300.0" promptText="Booking_id" style="-fx-border-color: #660000; -fx-border-width: 2; -fx-background-radius: 22; -fx-border-radius: 20;">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

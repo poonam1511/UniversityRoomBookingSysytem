@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="796.0" prefWidth="1291.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universityroombookingsystem.Booking_tabController">
+   <children>
+      <ComboBox fx:id="cmbSc" layoutX="84.0" layoutY="158.0" onAction="#cc" prefHeight="30.0" prefWidth="240.0" promptText="Select Column" style="-fx-border-color: #660000;" />
+      <TableView fx:id="tblList" layoutX="349.0" layoutY="95.0" prefHeight="633.0" prefWidth="942.0" style="-fx-border-color: #660000; -fx-border-width: 10;">
+         <columns>
+            <TableColumn prefWidth="75.0" text="C1" />
+            <TableColumn prefWidth="75.0" text="C2" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnUpdate" layoutX="84.0" layoutY="493.0" mnemonicParsing="false" onAction="#he" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: #660000;" stylesheets="@../../../Gym_Diary/src/styles/login.css" text="ApprovedOrNot" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnBack" cancelButton="true" layoutX="84.0" layoutY="584.0" mnemonicParsing="false" onAction="#he" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: #660000;" stylesheets="@../../../Gym_Diary/src/styles/login.css" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDelete" layoutX="84.0" layoutY="538.0" mnemonicParsing="false" onAction="#he" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: #660000;" stylesheets="@../../../Gym_Diary/src/styles/login.css" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="20.0" layoutY="78.0" prefHeight="48.0" prefWidth="293.0" text="Booking_Detail" textFill="#660000">
+         <font>
+            <Font name="Bell MT Bold" size="39.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSi" layoutX="84.0" layoutY="221.0" onKeyReleased="#kr" prefHeight="40.0" prefWidth="241.0" promptText="Search" style="-fx-border-color: #660000; -fx-border-width: 2; -fx-background-radius: 22; -fx-border-radius: 20;">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnRoom_tab" layoutX="84.0" layoutY="439.0" mnemonicParsing="false" onAction="#he" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: #660000;" stylesheets="@../../../Gym_Diary/src/styles/login.css" text="View Room_tab" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
