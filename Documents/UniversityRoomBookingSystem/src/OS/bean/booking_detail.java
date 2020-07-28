@@ -23,6 +23,28 @@ public class booking_detail {
      private String reason;
      private String status;
      private String BookingId;
+     private String pn;
+     private String addr;
+     
+     public String getPn() {
+        return pn;
+    }
+
+    public void setPn(String pn) {
+        this.pn = pn;
+    }
+     
+    public String getAddr() {
+        return addr;
+    }
+
+    public void setAddr(String addr) {
+        this.addr = addr;
+    }
+ 
+    
+    
+     
 
     public String getRoom_cap() {
         return room_cap;

@@ -28,7 +28,7 @@ public class BookDao extends BaseDAO{
             st.setString(i++, "%" + si + "%");
             ResultSet rs = st.executeQuery();
             while (rs.next()) {
-// lec_name,email,  time, duration,date,type_of_room,room_no,attendee_no,reason_for_booking ,status 
+// lec_name,email,  time, duration,date,type_of_room,room_no,attendee_no,reason_for_booking ,status,phone_no,address 
                 booking_detail c1 = new booking_detail();
                 c1.setId(rs.getString("id")); 
                 c1.setLec_name(rs.getString("lec_name"));
@@ -43,6 +43,9 @@ public class BookDao extends BaseDAO{
                 c1.setStatus(rs.getString("status"));
                 c1.setRoom_cap(rs.getString("room_cap"));
                 c1.setBookingId(rs.getString("booking_id"));
+                c1.setAddr(rs.getString("address"));
+                c1.setPn(rs.getString("phone_no"));
+                
                 
                 
                 
@@ -66,7 +69,7 @@ public class BookDao extends BaseDAO{
            // Date obj =new Date();
             con = getCon();
             //id INT NOT NULL AUTO_INCREMENT, lec_name,email,  time, duration,date,type_of_room,room_no,attendee_no,reason_for_booking ,status 
-            String sql = "insert into booking_detail (lec_name , email, time, duration , date , type_of_room , room_no, attendee_no,reason_for_booking , status,room_cap) values (?, ?, ?,?,?,?,?,?,?,?,?)";
+            String sql = "insert into booking_detail (lec_name , email, time, duration , date , type_of_room , room_no, attendee_no,reason_for_booking , status,room_cap,phone_no,address) values (?, ?, ?,?,?,?,?,?,?,?,?,?,?)";
             int i = 1;
             PreparedStatement st = con.prepareStatement(sql);
             st.setString(i++, c1.getLec_name());
@@ -80,6 +83,8 @@ public class BookDao extends BaseDAO{
             st.setString(i++, c1.getReason());
             st.setString(i++, c1.getStatus());
              st.setString(i++, c1.getRoom_cap());
+             st.setString(i++, c1.getPn());
+             st.setString(i++, c1.getAddr());
            // st.setString(i++, c1.getId());
             
             
@@ -141,7 +146,8 @@ public class BookDao extends BaseDAO{
                 c1.setStatus(rs.getString("status"));
                 c1.setRoom_cap(rs.getString("room_cap"));
                 c1.setBookingId(rs.getString("booking_id"));
-                
+                c1.setAddr(rs.getString("address"));
+                c1.setPn(rs.getString("phone_no"));
                 res = c1;
             }
             rs.close();
@@ -218,6 +224,8 @@ public class BookDao extends BaseDAO{
                 c1.setStatus(rs.getString("status"));
                 c1.setRoom_cap(rs.getString("room_cap"));
                 c1.setBookingId(rs.getString("booking_id"));
+                c1.setAddr(rs.getString("address"));
+                c1.setPn(rs.getString("phone_no"));
                                 res = c1;
             }
         } catch (Exception e) {
@@ -257,6 +265,8 @@ public class BookDao extends BaseDAO{
                 c1.setStatus(rs.getString("status"));
                 c1.setRoom_cap(rs.getString("room_cap"));
                 c1.setBookingId(rs.getString("booking_id"));
+                c1.setAddr(rs.getString("address"));
+                c1.setPn(rs.getString("phone_no"));
                                 res = c1;
               
             }
@@ -272,7 +282,7 @@ public class BookDao extends BaseDAO{
      
      
      
-     public static booking_detail searchForApproved(String roomNo, String time,String date){
+  /*   public static booking_detail searchForApproved(String roomNo, String time,String date){
         Connection con=null;
        booking_detail res=null;
         try {
@@ -310,7 +320,7 @@ public class BookDao extends BaseDAO{
         }
         return res;
     }
-     
+     */
      
      
     
