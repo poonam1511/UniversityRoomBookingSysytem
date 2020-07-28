@@ -93,7 +93,7 @@ GUIValidator g1 = new GUIValidator();
                     //return;
                  }
                  
-                 Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
+                 Parent root = FXMLLoader.load(getClass().getResource("Room_tab.fxml"));
                 Scene scene = new Scene(root);
                 Stage stage = (Stage) btnReset.getScene().getWindow();
                 stage.setScene(scene);
@@ -104,10 +104,27 @@ GUIValidator g1 = new GUIValidator();
             }
         }
         
+         else   if(event.getSource()==btnReset){
+             try {
+                Parent root = FXMLLoader.load(getClass().getResource("AddRoom.fxml"));
+                Scene scene = new Scene(root);
+                Stage stage = (Stage) btnReset.getScene().getWindow();
+                stage.setScene(scene);
+                stage.show();
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        
+            
+        }
+        
+        
+        
         
         else   if(event.getSource()==btnBack){
              try {
-                Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("Room_tab.fxml"));
                 Scene scene = new Scene(root);
                 Stage stage = (Stage) btnReset.getScene().getWindow();
                 stage.setScene(scene);

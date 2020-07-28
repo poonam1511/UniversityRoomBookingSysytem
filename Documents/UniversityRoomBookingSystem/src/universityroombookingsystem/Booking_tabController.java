@@ -106,10 +106,25 @@ public void populate() {
         if (event.getSource() == btnUpdate) {
             try {
                 String id = MyUtils.getSelColValue("id", tblList);
+                booking_detail c1 = BookDao.searchById(id);
+LinkedList res=RoomDao.searchForRoomNo(c1.getType_of_room(),c1.getRoom_cap());
                 if (id == null) {
                     JOptionPane.showMessageDialog(null, "Please select a row!");
                     return;
                 }
+                 if ((c1.getStatus()).equals("approved")) {
+                    JOptionPane.showMessageDialog(null, "That client's booking is already approved!");
+                    return;
+                }
+                 if((res.isEmpty())){
+         c1.setBookingId("null");
+                           c1.setRoom_no("NoRoom");
+                           c1.setStatus("NotApproved");    
+                           BookDao.update(c1);
+         JOptionPane.showMessageDialog(null, "No room Avail with such config!");
+        return;
+        }
+                 
                 else{
                    ApproveOrNotController.id = id;
                    

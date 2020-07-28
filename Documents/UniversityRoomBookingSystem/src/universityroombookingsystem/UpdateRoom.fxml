@@ -9,9 +9,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #660000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universityroombookingsystem.UpdateRoomController">
+<AnchorPane id="AnchorPane" prefHeight="690.0" prefWidth="1014.0" style="-fx-background-color: #660000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universityroombookingsystem.UpdateRoomController">
    <children>
-      <Pane layoutX="99.0" layoutY="135.0" prefHeight="545.0" prefWidth="885.0" style="-fx-background-color: white;">
+      <Pane layoutX="67.0" layoutY="117.0" prefHeight="519.0" prefWidth="885.0" style="-fx-background-color: white; -fx-background-radius: 40;">
          <children>
             <TextField fx:id="txtRoomNo" layoutX="391.0" layoutY="67.0" prefHeight="45.0" prefWidth="300.0" promptText="Room_no" style="-fx-border-color: #660000; -fx-border-width: 2; -fx-background-radius: 22; -fx-border-radius: 20;">
                <font>
@@ -52,7 +52,7 @@
             <ComboBox fx:id="cmbType" layoutX="391.0" layoutY="156.0" minHeight="45.0" prefHeight="25.0" prefWidth="300.0" promptText="Type of Room" style="-fx-border-color: #660000;" />
          </children>
       </Pane>
-      <Label layoutX="303.0" layoutY="35.0" prefHeight="65.0" prefWidth="354.0" text="Room_Detail" textAlignment="JUSTIFY">
+      <Label layoutX="365.0" layoutY="35.0" prefHeight="65.0" prefWidth="354.0" text="Room_Detail" textAlignment="JUSTIFY">
          <effect>
             <DropShadow color="WHITE" />
          </effect>

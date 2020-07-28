@@ -21,6 +21,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Hyperlink;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /**
@@ -35,8 +37,6 @@ public class HomePageController implements Initializable {
     @FXML
     private Button btnBook;
     @FXML
-    private Button btnBack;
-    @FXML
     private ComboBox<?> cmbCap;
     @FXML
     private ComboBox<?> cmbType;
@@ -49,12 +49,17 @@ public class HomePageController implements Initializable {
  GUIValidator g1 = new GUIValidator();
     @FXML
     private Hyperlink LoginHypLink;
+    @FXML
+    private TextField txtAttendee;
+    @FXML
+    private TextArea taReason;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+         g1.addIntValidator(txtAttendee);
          LinkedList types = new LinkedList();
         types.add("Lecture hall");
         types.add("Seminar hall");
@@ -104,6 +109,8 @@ public class HomePageController implements Initializable {
                  Personal_detailController.time=cmbTime.getValue().toString();
                  Personal_detailController.duration=cmbDuration.getValue().toString();
                  Personal_detailController.capacity=cmbCap.getValue().toString();
+                 Personal_detailController.Attendee=txtAttendee.getText();
+                 Personal_detailController.Reason=taReason.getText();
                  
                  Parent root = FXMLLoader.load(getClass().getResource("Personal_detail.fxml"));
                 Scene scene = new Scene(root);

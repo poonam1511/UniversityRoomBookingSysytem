@@ -90,6 +90,45 @@ static String sc = "id";
              }
                  
     }
+        
+        
+       else   if(event.getSource()==btnReset){
+             try {
+                Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+                Scene scene = new Scene(root);
+                Stage stage = (Stage) btnReset.getScene().getWindow();
+                stage.setScene(scene);
+                stage.show();
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        
+            
+        }
+    
+        
+        
+        
+        
+        
+        
+        else   if(event.getSource()==btnBack){
+             try {
+                Parent root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
+                Scene scene = new Scene(root);
+                Stage stage = (Stage) btnReset.getScene().getWindow();
+                stage.setScene(scene);
+                stage.show();
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        
+            
+        } 
+        
+        
     
 }
 }

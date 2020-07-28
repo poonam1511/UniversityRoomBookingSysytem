@@ -9,9 +9,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="838.0" prefWidth="1036.0" style="-fx-background-color: #660000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universityroombookingsystem.Personal_detailController">
+<AnchorPane id="AnchorPane" prefHeight="756.0" prefWidth="1008.0" style="-fx-background-color: #660000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universityroombookingsystem.Personal_detailController">
    <children>
-      <Pane layoutX="85.0" layoutY="118.0" prefHeight="650.0" prefWidth="885.0" style="-fx-background-color: white;">
+      <Pane layoutX="63.0" layoutY="122.0" prefHeight="578.0" prefWidth="885.0" style="-fx-background-color: white; -fx-background-radius: 40; -fx-background-image: url(&quot;image/roomPic.jpg&quot;); -fx-background-size: cover;">
          <children>
             <TextField fx:id="txtLecturerName" layoutX="398.0" layoutY="70.0" prefHeight="45.0" prefWidth="300.0" promptText="Lecturer_name" style="-fx-border-color: #660000; -fx-border-width: 2; -fx-background-radius: 22; -fx-border-radius: 20;">
                <font>
@@ -23,7 +23,7 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </TextField>
-            <Label layoutX="186.0" layoutY="78.0" text="Name" textFill="#660000">
+            <Label layoutX="190.0" layoutY="78.0" text="Name" textFill="#660000">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
@@ -33,40 +33,40 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="183.0" layoutY="369.0" text="Reason" textFill="#660000">
+            <Button fx:id="btnReset" layoutX="364.0" layoutY="492.0" mnemonicParsing="false" onAction="#he" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: #660000;" stylesheets="@../styles/login.css" text="Reset" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSubmit" defaultButton="true" layoutX="363.0" layoutY="456.0" mnemonicParsing="false" onAction="#he" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: #660000;" stylesheets="@../styles/login.css" text="Submit" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnBack" layoutX="360.0" layoutY="533.0" mnemonicParsing="false" onAction="#he" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: #660000;" stylesheets="@../styles/login.css" text="Back" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="190.0" layoutY="236.0" prefHeight="35.0" prefWidth="118.0" text="Phone_no" textFill="#660000">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Button fx:id="btnReset" layoutX="335.0" layoutY="445.0" mnemonicParsing="false" onAction="#he" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: #660000;" stylesheets="@../styles/login.css" text="Reset" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Button>
-            <Button fx:id="btnSubmit" defaultButton="true" layoutX="46.0" layoutY="445.0" mnemonicParsing="false" onAction="#he" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: #660000;" stylesheets="@../styles/login.css" text="Submit" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Button>
-            <Button fx:id="btnBack" layoutX="621.0" layoutY="445.0" mnemonicParsing="false" onAction="#he" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: #660000;" stylesheets="@../styles/login.css" text="Back" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Button>
-            <TextArea fx:id="taReason" layoutX="398.0" layoutY="330.0" prefHeight="105.0" prefWidth="269.0" promptText="Desc" style="-fx-border-color: #660000; -fx-border-radius: 20; -fx-background-radius: 22; -fx-border-width: 2; &quot; xmlns=&quot;http: //javafx.com/javafx/8&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot; /&gt;; -fx-border-radius: 20; -fx-background-radius: 22; -fx-border-width: 2;" />
-            <Label layoutX="108.0" layoutY="236.0" prefHeight="35.0" prefWidth="239.0" text="Expected attendee" textFill="#660000">
-               <font>
-                  <Font name="System Bold" size="24.0" />
-               </font>
-            </Label>
-            <TextField fx:id="txtAttendee" layoutX="398.0" layoutY="231.0" prefHeight="45.0" prefWidth="300.0" promptText="Expected  no. of attendee" style="-fx-border-color: #660000; -fx-border-width: 2; -fx-background-radius: 22; -fx-border-radius: 20;">
+            <TextField fx:id="txtPhoneNo" layoutX="398.0" layoutY="231.0" prefHeight="45.0" prefWidth="300.0" promptText="Phone Number" style="-fx-border-color: #660000; -fx-border-width: 2; -fx-background-radius: 22; -fx-border-radius: 20;">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </TextField>
+            <Label layoutX="190.0" layoutY="317.0" text="Address" textFill="#660000">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="taAddress" layoutX="409.0" layoutY="292.0" prefHeight="122.0" prefWidth="281.0" promptText="Desc" style="-fx-border-color: #660000; -fx-border-radius: 20; -fx-background-radius: 22; -fx-border-width: 2; &quot; xmlns=&quot;http: //javafx.com/javafx/8&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot; /&gt;; -fx-border-radius: 20; -fx-background-radius: 22; -fx-border-width: 2;" />
          </children>
       </Pane>
-      <Label layoutX="318.0" layoutY="28.0" prefHeight="65.0" prefWidth="448.0" text="Personal_Detail" textAlignment="JUSTIFY">
+      <Label layoutX="342.0" layoutY="26.0" prefHeight="65.0" prefWidth="448.0" text="Personal_Detail" textAlignment="JUSTIFY">
          <effect>
             <DropShadow color="WHITE" />
          </effect>

@@ -20,12 +20,7 @@
             </Label>
          </children>
       </Pane>
-      <Button fx:id="btnUpdate" layoutX="681.0" layoutY="263.0" mnemonicParsing="false" onAction="#he" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../styles/login.css" text="Update" textFill="#660000">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Button>
-      <Button fx:id="btnBack" layoutX="681.0" layoutY="314.0" mnemonicParsing="false" onAction="#he" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../styles/login.css" text="Back" textFill="#660000">
+      <Button fx:id="btnBack" layoutX="737.0" layoutY="290.0" mnemonicParsing="false" onAction="#he" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../styles/login.css" text="Back" textFill="#660000">
          <font>
             <Font size="18.0" />
          </font>

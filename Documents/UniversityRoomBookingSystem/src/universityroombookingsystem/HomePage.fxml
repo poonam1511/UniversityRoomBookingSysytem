@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -7,61 +9,91 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #660000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universityroombookingsystem.HomePageController">
+<AnchorPane id="AnchorPane" prefHeight="757.0" prefWidth="1020.0" style="-fx-background-color: #660000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="universityroombookingsystem.HomePageController">
    <children>
-      <Pane layoutX="51.0" layoutY="37.0" prefHeight="509.0" prefWidth="885.0" style="-fx-background-color: white;">
+      <Pane layoutX="81.0" layoutY="81.0" opacity="0.9" prefHeight="597.0" prefWidth="885.0" style="-fx-background-color: white; -fx-background-radius: 40; -fx-background-image: url(&quot;image/roomPic.jpg&quot;); -fx-background-size: cover;">
          <children>
-            <Label layoutX="196.0" layoutY="45.0" text="Type" textFill="#660000">
+            <Label layoutX="68.0" layoutY="73.0" text="Type" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="196.0" layoutY="299.0" prefHeight="35.0" prefWidth="114.0" text="Capacity" textFill="#660000">
+            <Label layoutX="51.0" layoutY="330.0" prefHeight="35.0" prefWidth="114.0" text="Capacity" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Button fx:id="btnReset" layoutX="352.0" layoutY="414.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../styles/login.css" text="Reset" textFill="WHITE">
+            <Button fx:id="btnReset" layoutX="398.0" layoutY="547.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../styles/login.css" text="Reset" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button fx:id="btnBook" defaultButton="true" layoutX="352.0" layoutY="364.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../styles/login.css" text="Book Now" textFill="WHITE">
+            <Button fx:id="btnBook" defaultButton="true" layoutX="398.0" layoutY="497.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../styles/login.css" text="Book Now" textFill="WHITE">
                <font>
                   <Font name="Cooper Black" size="16.0" />
                </font>
             </Button>
-            <Button fx:id="btnBack" layoutX="352.0" layoutY="464.0" mnemonicParsing="false" onAction="#he" prefHeight="39.0" prefWidth="275.0" style="-fx-background-color: #660000;" stylesheets="@../styles/login.css" text="Back" textFill="WHITE">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Button>
-            <ComboBox fx:id="cmbCap" layoutX="328.0" layoutY="299.0" minHeight="45.0" prefHeight="25.0" prefWidth="300.0" promptText="Strength of Room" style="-fx-border-color: #660000;" />
-            <ComboBox fx:id="cmbType" layoutX="328.0" layoutY="51.0" minHeight="45.0" prefHeight="25.0" prefWidth="300.0" promptText="Type of Room" style="-fx-border-color: #660000;" />
-            <ComboBox fx:id="cmbTime" layoutX="328.0" layoutY="187.0" minHeight="45.0" prefHeight="25.0" prefWidth="300.0" promptText="Time" style="-fx-border-color: #660000;" />
-            <DatePicker fx:id="txtDatePicker" layoutX="328.0" layoutY="130.0" prefHeight="45.0" prefWidth="300.0" promptText="Datepicker" style="-fx-border-color: #660000;" />
-            <ComboBox fx:id="cmbDuration" layoutX="328.0" layoutY="243.0" minHeight="45.0" prefHeight="25.0" prefWidth="300.0" promptText="Duration" style="-fx-border-color: #660000;" />
-            <Label layoutX="196.0" layoutY="132.0" text="Date" textFill="#660000">
+            <ComboBox fx:id="cmbCap" layoutX="193.0" layoutY="320.0" minHeight="45.0" prefHeight="25.0" prefWidth="300.0" promptText="Strength of Room" style="-fx-border-color: #660000;" />
+            <ComboBox fx:id="cmbType" layoutX="193.0" layoutY="72.0" minHeight="45.0" prefHeight="25.0" prefWidth="300.0" promptText="Type of Room" style="-fx-border-color: #660000;" />
+            <ComboBox fx:id="cmbTime" layoutX="193.0" layoutY="208.0" minHeight="45.0" prefHeight="25.0" prefWidth="300.0" promptText="Time" style="-fx-border-color: #660000;" />
+            <DatePicker fx:id="txtDatePicker" layoutX="193.0" layoutY="151.0" prefHeight="45.0" prefWidth="300.0" promptText="Datepicker" style="-fx-border-color: #660000;" />
+            <ComboBox fx:id="cmbDuration" layoutX="193.0" layoutY="264.0" minHeight="45.0" prefHeight="25.0" prefWidth="300.0" promptText="Duration" style="-fx-border-color: #660000;" />
+            <Label layoutX="61.0" layoutY="153.0" text="Date" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="196.0" layoutY="192.0" text="Time" textFill="#660000">
+            <Label layoutX="61.0" layoutY="213.0" text="Time" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="196.0" layoutY="242.0" text="Duration" textFill="#660000">
+            <Label layoutX="61.0" layoutY="263.0" text="Duration" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Hyperlink fx:id="LoginHypLink" layoutX="719.0" layoutY="8.0" onAction="#he" text="Login" textFill="#660000">
+            <Hyperlink fx:id="LoginHypLink" layoutX="719.0" layoutY="8.0" onAction="#he" text="Login" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Hyperlink>
+            <Label layoutX="27.0" layoutY="386.0" prefHeight="35.0" prefWidth="158.0" text="Exp_attendee" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtAttendee" layoutX="197.0" layoutY="384.0" prefHeight="45.0" prefWidth="300.0" promptText="Expected  no. of attendee" style="-fx-border-color: #660000; -fx-border-width: 2; -fx-background-radius: 22; -fx-border-radius: 20;">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </TextField>
+            <TextArea fx:id="taReason" layoutX="655.0" layoutY="189.0" prefHeight="146.0" prefWidth="221.0" promptText="Desc" style="-fx-border-color: #660000; -fx-border-radius: 20; -fx-background-radius: 22; -fx-border-width: 2; &quot; xmlns=&quot;http: //javafx.com/javafx/8&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot; /&gt;; -fx-border-radius: 20; -fx-background-radius: 22; -fx-border-width: 2;" />
+            <Label layoutX="550.0" layoutY="236.0" text="Reason" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
+      <Label layoutX="369.0" layoutY="14.0" prefHeight="65.0" prefWidth="356.0" text="Let's Book" textAlignment="JUSTIFY">
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+         <font>
+            <Font name="Cooper Black" size="48.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#050505" offset="0.35738831615120265" />
+                  <Stop color="#30159e" offset="0.4467353951890034" />
+                  <Stop color="#3db84c" offset="0.604810996563573" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
    </children>
 </AnchorPane>

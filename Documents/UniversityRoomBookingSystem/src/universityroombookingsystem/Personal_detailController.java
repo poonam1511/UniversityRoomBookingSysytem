@@ -40,8 +40,7 @@ public class Personal_detailController implements Initializable {
     private Button btnSubmit;
     @FXML
     private Button btnBack;
-    @FXML
-    private TextField txtAttendee;
+  //  private TextField txtAttendee;
    // private ComboBox<?> txtDuration;
     @FXML
     private TextField txtLecturerName;
@@ -51,15 +50,21 @@ static String time="";
 static String date="";
 static String duration="";
 static String capacity="";
+static String Attendee="";
+static String Reason="";
+   // private TextArea taReason;
     @FXML
-    private TextArea taReason;
+    private TextField txtPhoneNo;
+    @FXML
+    private TextArea taAddress;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        g1.addIntValidator(txtAttendee);
+       g1.addPNValidator(txtPhoneNo);
+       
         g1.addEmailValidator(txtEmail);
         g1.addNameValidator(txtLecturerName);
         
@@ -77,17 +82,21 @@ static String capacity="";
                  booking_detail c1=new booking_detail();
                  c1.setLec_name(txtLecturerName.getText());
                  c1.setEmail(txtEmail.getText());
-                 c1.setAttendee_no(txtAttendee.getText());
-                 c1.setReason(taReason.getText());
+                 c1.setPn(txtPhoneNo.getText());
+                 c1.setAddr(taAddress.getText());
+                 
+                 
+                 c1.setAttendee_no(Attendee);
+                 c1.setReason(Reason);
                  c1.setType_of_room(type);
                  c1.setTime(time);
                  c1.setDate(date);
                  c1.setDuration(duration);
                  c1.setRoom_cap(capacity);
                  c1.setStatus("pending");
-             if(Integer.parseInt(txtAttendee.getText())<=Integer.parseInt(capacity)){
+             if(Integer.parseInt(Attendee)<=Integer.parseInt(capacity)){
                  BookDao.insert(c1);
-                 JOptionPane.showMessageDialog(null, "Your status will be updated soon!");
+                 JOptionPane.showMessageDialog(null, "Thanking For booking request\nYour status will be updated soon!");
              }
               
              else{
